@@ -3,21 +3,21 @@ import './style.css';
 import React, { useState } from 'react';
 
 const App = () => {
-  const [result, setFResult] = useState("")
+  const [solution, setFResult] = useState("")
 
   const clickAction = (e) => {
-       setFResult(result.concat(e.target.name));
+       setFResult(solution.concat(e.target.name));
   }
   const clear = () => {
       setFResult("")
   }
 
   const undo = () =>{
-      setFResult(result.slice(0, - 1));
+      setFResult(solution.slice(0, - 1));
   }
   const solve = () => {
     try{
-      setFResult(eval(result).toString());
+      setFResult(eval(solution).toString());
     }
     catch(err){
       setFResult("Syntaxx Error!")
@@ -28,11 +28,12 @@ const App = () => {
       <p>My Calculator App</p>
       <div className="container">
          <form>
-           <input className="MyInput" type="text" value={result} />
+           <input className="MyInput" type="text" value={solution} />
          </form>
          <div className="keys">
           <button className="operators" onClick={clear} id="clear">Del</button>
           <button className="operators" onClick={undo} id="undo">C</button>
+          <button className="operators" name="%" onClick={clickAction}>%</button>
           <button className="operators" name="/" onClick={clickAction}>/</button>
           <button name="7" onClick={clickAction}>7</button>
           <button name="8" onClick={clickAction}>8</button>

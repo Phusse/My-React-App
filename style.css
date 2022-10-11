@@ -1,21 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&family=Poppins:wght@300&display=swap');
-*{
+* {
   font-size: 18px;
   font-family: 'Montserrat';
 }
-body{
+body {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgb(128, 128, 128);
 }
-p{
+p {
   color: white;
   text-align: center;
   font-size: 30px;
   font-weight: 900;
 }
-.container{
+.container {
   background-color: #62336b;
   top: 50%;
   left: 50%;
@@ -23,18 +23,18 @@ p{
   transform: translate(-50%, -50%);
   margin: 0 auto;
   width: 300px;
-  height: 60vh;
+  height: 65vh;
   text-align: center;
   border: 10px solid #62336b;
   border-radius: 8px;
 }
-.keys{
-  display:  grid;
+.keys {
+  display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: minmax(60px, auto);
 }
 
-input[type="text"] {
+input[type='text'] {
   text-align: right;
   font-size: 25px;
   font-weight: 900;
@@ -44,23 +44,26 @@ input[type="text"] {
   margin-top: 9px;
   margin-bottom: 10px;
   color: black;
-   border-radius: 5px;
+  border-radius: 5px;
   border: 0px;
 }
-input:focus,input:active,button:focus,button:active{
+input:focus,
+input:active,
+button:focus,
+button:active {
   outline: none;
 }
-#equal-to{
+#equal-to {
   grid-column: 3/5;
   grid-row: 5;
 }
-#clear{
-    grid-column: 1/3;
-    grid-row: 1;
+#clear {
+  /* grid-column: 1/3; */
+  grid-row: 1;
 }
-button{
+button {
   margin: 5px;
-  height: 8vh;
+  height: 9vh;
   border-radius: 8px;
   cursor: pointer;
   background-color: #35394e;
@@ -69,6 +72,6 @@ button{
   font-weight: 500;
 }
 
-.operators{
+.operators {
   background-color: #9094a7;
 }
