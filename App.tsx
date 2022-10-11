@@ -28,7 +28,7 @@ const App = () => {
       <p>My Calculator App</p>
       <div className="container">
          <form>
-           <input className="MyInput" type="text" value={solution} />
+           <input className="MyInput" type="text" disabled value={solution} />
          </form>
          <div className="keys">
           <button className="operators" onClick={clear} id="clear">Del</button>
